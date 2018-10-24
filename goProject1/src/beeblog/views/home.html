@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+    <div>
+        {{.IsLogin}}
+        <ul>
+            {{if .IsLogin}}
+            {{/*<li><a href="/home/login?exit=true">退出</a></li>*/}}
+            <li><a href="/home/logout">退出</a></li>
+            {{else}}
+            <li><a href="/home/login">login</a></li>
+            {{end}}
+        </ul>
+    </div>
+    <h1>home</h1>
+</body>
+</html>

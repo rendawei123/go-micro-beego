@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>用户登录</h1>
+    <div>
+        <form method="post" action="/home/login">
+            <div>
+                <label>Account</label>
+                <input type="text" placeholder="Enter account" name="uname">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" placeholder="Password" name="pwd">
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="autoLogin"> 自动登录
+                </label>
+            </div>
+            <button type="submit"> 登录 </button>
+        </form>
+    </div>
+</body>
+</html>

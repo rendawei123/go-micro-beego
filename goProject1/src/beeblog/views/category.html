@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类</title>
+</head>
+<body>
+    <h1>分类列表</h1>
+    <div>
+        <form method="get" action="/home/category">
+            <div>
+                <label>分类名称</label>
+                <input type="text" placeholder="分类" name="name">
+            </div>
+            <input type="hidden" name="op" value="add">
+            <button type="submit"> 添加 </button>
+        </form>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>名称</th>
+                    <th>文章数</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Categories}}
+                <th>{{.Id}}</th>
+                <th>{{.Title}}</th>
+                <th>{{.TopicCount}}</th>
+                <th>
+                    <a href="/home/category?op=del&id={{.Id}}">删除</a>
+                </th>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
